@@ -8,22 +8,22 @@ server:
 data:
   database:
     driver: mysql
-    source: root:123456@tcp(192.168.131.133:3306)/kratos_realworld?charset=utf8mb4&parseTime=True&loc=Local
+    source: root:MyNewPass4!@tcp(192.168.56.129:3306)/kratos_realworld?charset=utf8mb4&parseTime=True&loc=Local
   redis:
-    addr: 192.168.131.133:6379
+    addr: 192.168.56.129:6379
     dial_timeout: 1s
     read_timeout: 0.2s
     write_timeout: 0.2s
   kafka:
-    endpoints: [ "192.168.131.133:9092" ]
+    endpoints: [ "192.168.56.129:9092" ]
 trace:
-  endpoint: http://192.168.131.133:14268/api/traces
+  endpoint: http://192.168.56.129:14268/api/traces
 registry:
   consul:
-    address: 192.168.131.133:8500
+    address: 192.168.56.129:8500
     scheme: http
   etcd:
-    endpoints: [ "192.168.131.133:2379" ]
+    endpoints: [ "192.168.56.129:2379" ]
 application:
   game:
     name: kratos-demo
